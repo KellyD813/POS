@@ -3,6 +3,19 @@ console.log("linked");
 var a = document.querySelector("#AItem");
 var b = document.querySelector("#BItem");
 var aText = document.querySelector("#AText").textContent;
+var itemA = { 
+	name: "item A",
+	price: 5,
+	li: document.createElement("li"),
+	render: function() { 
+		// set the li's content to the obj's properties
+    this.li.textContent = this.name + " for " + this.price;
+    // append the li to the page
+    bill.appendChild(this.li);
+	}
+};
+
+
 var aPrice = document.querySelector("#APrice").textContent;
 var bText = document.querySelector("#BText").textContent;
 var bPrice = document.querySelector("#BPrice").textContent;
