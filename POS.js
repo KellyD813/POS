@@ -1,60 +1,64 @@
 console.log("linked");
 
-var a = document.querySelector("#AItem");
-var b = document.querySelector("#BItem");
-var aText = document.querySelector("#AText").textContent;
-var itemA = { 
-	name: "item A",
-	price: 5,
-	li: document.createElement("li"),
-	render: function() { 
-		// set the li's content to the obj's properties
-    this.li.textContent = this.name + " for " + this.price;
-    // append the li to the page
-    bill.appendChild(this.li);
-	}
-};
-
-
-var aPrice = document.querySelector("#APrice").textContent;
-var bText = document.querySelector("#BText").textContent;
-var bPrice = document.querySelector("#BPrice").textContent;
-
+//LOCATING ELMS FROM HTML
 var bill = document.querySelector(".bill");
 var subtotal = document.querySelector(".subtotal");
 var tax = document.querySelector(".tax");
-var final = document.querySelector(".total");
+var total = document.querySelector(".total");
+var itemAButton = document.querySelector("#AItem");
+var itemBButton = document.querySelector("#BItem");
 
+//TOTALS
 var subtotalBill = 0;
 var taxBill = 0;
 var finalBill = 0;
 
-var addToBillA = function(event) {
-	bill.scrollTop = 999999;
-	var li = document.createElement("li");
-	li.textContent = aText + " for " + aPrice;
-	bill.appendChild(li);
-	subtotalBill += parseInt(aPrice);
-	subtotal.textContent = "Subtotal: $" + subtotalBill;
-	taxBill = .05 * subtotalBill;
-	tax.textContent = "Tax: $" + taxBill;
-	finalBill =  taxBill + subtotalBill;
-	final.textContent = "Total: $" + finalBill;
-}
+//CONSTRUCTOR FUNCTIONS(MENU ITEMS)
+var MenuItems = function(name, price) {
+	this.name = name;
+	this.price = price;
+};
 
-var addToBillB = function(event) {
-	bill.scrollTop = 999999;
-	var li = document.createElement("li");
-	li.textContent = bText + " for " + bPrice;
-	bill.appendChild(li);
-	subtotalBill += parseInt(bPrice);
-	subtotal.textContent = "Subtotal: $" + subtotalBill;
-	taxBill = .05 * subtotalBill;
-	tax.textContent = "Tax: $" + taxBill;
-	finalBill =  taxBill + subtotalBill;
-	final.textContent = "Total: $" + finalBill;
-}
+//CREATING MENU ITEMS
+var itemA = new MenuItems("Item A", 5);
+var itemB = new MenuItems("Item B", 10);
 
-a.addEventListener("click", addToBillA);
-b.addEventListener("click", addToBillB);
+//FUNCTIONS TO RUN
+MenuItems.prototype.addToBill = function() {
+	this.li = document.createElement("li");
+	this.li.textContent = this.name + " for " + this.price;
+	bill.appendChild(this.li);
+};
+
+MenuItems.prototype.updateBillTotals = function () {
+	subtotalBill += this.price;
+	taxBill = subtotalBill * .05;
+	finalBill = subtotalBill + taxBill;
+};
+
+MenuItems.prototype.updateBillDisplay = function () {
+  subtotal.textContent = "Subtotal: $" + subtotalBill;
+  tax.textContent = "Tax: $" + taxBill;
+  total.textContent = "Total: $" + finalBill;
+};
+
+MenuItems.prototype.render = function() {
+	this.addToBill();
+	this.updateBillDisplay(this.updateBillTotals());
+};
+
+
+//This has to happen for all menu items
+var renderA = function() {
+	itemA.render();
+};
+
+var renderB = function() {
+	itemB.render();
+};
+
+itemAButton.addEventListener("click", renderA);
+itemBButton.addEventListener("click", renderB);
+
+
 
