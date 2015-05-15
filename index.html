@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>POS for Restaurant</title>
+	<link rel="stylesheet" href="POS.css">
+	<script src="jquery-2.1.4.js"></script>
+</head>
+<body>
+
+	<h1>Restaurant Name</h1>
+	<div class="container">
+		<div class="left">
+			<h2>Menu</h2>
+			<table>
+				<tr>
+					<td><strong>Item</strong></td>
+					<td><strong>Price</strong></td>
+				</tr>
+				<tr >
+					<td id="AText">A</td>
+					<td id="APrice">5</td>
+					<td><button class="button" id="AItem">+</button></td>
+				</tr>
+				<tr>
+					<td id="BText">B</td>
+					<td id="BPrice">10</td>
+					<td><button class="button" id="BItem">+</button></td>		
+				</tr>
+			</table> 
+		</div>
+		<div class="right">
+			<h2>Bill</h2>
+			<ul class="bill"></ul>
+
+			<h3 class="subtotal">Subtotal: $0</h3>
+			<h3 class="tax">Tax: $0</h3>
+			<h3 class="total">Total: $0</h3>
+		</div>
+	</div>
+
+	<script src="POS.js"></script>
+</body>
+</html>
