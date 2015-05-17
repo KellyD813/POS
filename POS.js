@@ -1,24 +1,24 @@
 //LOCATING ELMS FROM HTML
-var bill = document.querySelector(".bill");
-var subtotal = document.querySelector(".subtotal");
-var tax = document.querySelector(".tax");
-var total = document.querySelector(".total");
-var current = document.querySelector(".current");
-var itemAButton = document.querySelector("#AItem");
-var itemBButton = document.querySelector("#BItem");
-var itemCButton = document.querySelector("#CItem");
-var itemDButton = document.querySelector("#DItem");
-var itemEButton = document.querySelector("#EItem");
-var itemFButton = document.querySelector("#FItem");
-var itemGButton = document.querySelector("#GItem");
-var itemHButton = document.querySelector("#HItem");
+var $bill = $(".bill");
+var $subtotal = $(".subtotal");
+var $tax = $(".tax");
+var $total = $(".total");
+var $current = $(".current");
+var $itemAButton = $("#AItem");
+var $itemBButton = $("#BItem");
+var $itemCButton = $("#CItem");
+var $itemDButton = $("#DItem");
+var $itemEButton = $("#EItem");
+var $itemFButton = $("#FItem");
+var $itemGButton = $("#GItem");
+var $itemHButton = $("#HItem");
 
 //TOTALS
 var subtotalBill = 0;
 var taxBill = 0;
 var finalBill = 0;
 
-//CONSTRUCTOR FUNCTION(MENU ITEMS)
+//CONSTRUCTOR FUNCTION (MENU ITEMS)
 var MenuItems = function(name, price) {
 	this.name = name;
 	this.price = price;
@@ -36,10 +36,9 @@ var itemH = new MenuItems("Tea", 3);
 
 //FUNCTIONS TO RUN
 MenuItems.prototype.addToBill = function() {
-	this.li = document.createElement("li");
-	this.li.textContent = this.name + " for " + this.price;
-	bill.appendChild(this.li);
-	bill.scrollTop = 999999999;
+	this.li = $("<li>").text(this.name + " for $" + this.price);
+	$($bill).append(this.li);
+	$($bill).scrollTop(999);
 };
 
 MenuItems.prototype.updateBillTotals = function () {
@@ -49,10 +48,10 @@ MenuItems.prototype.updateBillTotals = function () {
 };
 
 MenuItems.prototype.updateBillDisplay = function () {
-  subtotal.textContent = "Subtotal: $" + subtotalBill;
-  tax.textContent = "Tax: $" + taxBill;
-  total.textContent = "Total: $" + finalBill;
-  current.textContent = "Total: $" + finalBill;
+  $subtotal.text("Subtotal: $" + subtotalBill);
+  $tax.text("Tax: $" + taxBill);
+  $total.text("Total: $" + finalBill);
+  $current.text("Total: $" + finalBill);
 };
 
 MenuItems.prototype.render = function() {
@@ -93,16 +92,17 @@ var renderH = function() {
 	itemH.render();
 };
 
+//CLICK EVENTS
+$($itemAButton).click(renderA);
+$($itemBButton).click(renderB);
+$($itemCButton).click(renderC);
+$($itemDButton).click(renderD);
+$($itemEButton).click(renderE);
+$($itemFButton).click(renderF);
+$($itemGButton).click(renderG);
+$($itemHButton).click(renderH);
 
-//EVENT LISTENERS 
-itemAButton.addEventListener("click", renderA);
-itemBButton.addEventListener("click", renderB);
-itemCButton.addEventListener("click", renderC);
-itemDButton.addEventListener("click", renderD);
-itemEButton.addEventListener("click", renderE);
-itemFButton.addEventListener("click", renderF);
-itemGButton.addEventListener("click", renderG);
-itemHButton.addEventListener("click", renderH);
+
 
 
 
