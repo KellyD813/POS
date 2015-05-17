@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>POS for Restaurant</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="POS.css">
+	<script src="jquery-2.1.4.js"></script>
+</head>
+<body>
+	<header>
+		<div class="overview-info">Order# 5678</div>
+		<div class="current overview-info">Total: $0</div>
+	</header>
+	<div class="col">
+		<h2 class="section-heading">Menu</h2>
+		<div class="food">
+			<button class="button" id="AItem"><span class="item-name">Plain</span><span class="item-price">$5</span></button>
+			<button class="button" id="BItem"><span class="item-name">Butter</span><span class="item-price">$6</span></button>
+      <button class="button" id="CItem"><span class="item-name">Avocado</span><span class="item-price">$8</span></button>
+      <button class="button" id="DItem"><span class="item-name">Peanut Butter</span><span class="item-price">$8</span></button>
+      <button class="button" id="EItem"><span class="item-name">Jam</span><span class="item-price">$7</span></button>
+    </div>
+    <div class="drink">
+      <button class="button" id="FItem"><span class="item-name">Water</span><span class="item-price">$3</span></button>
+      <button class="button" id="GItem"><span class="item-name">Coffee</span><span class="item-price">$4</span></button>
+      <button class="button" id="HItem"><span class="item-name">Tea</span><span class="item-price">$3</span></button>
+	  </div>
+	</div>
+	<div class="col">
+		<h2 class="section-heading">Receipt</h2>
+		<ul class="bill"></ul>
+		<div class="total-container">
+			<div class="subtotal bill-result">Subtotal: $0</div>
+			<div class="tax bill-result">Tax: $0</div>
+			<div class="total bill-result">Total: $0</div>
+		</div>
+	</div>
+  <footer><img class="logo" src="images/toasted-logo.png" alt="Toasted"><p>"Toast" icon by Eugen Belyakoff, from thenounproject.com.</p></footer>
+
+	<script src="POS.js"></script>
+</body>
+</html>

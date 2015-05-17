@@ -1,0 +1,140 @@
+body {
+	font-family: 'Varela Round', sans-serif;
+	padding: 20px;
+}
+
+header {
+	overflow: hidden;
+	border-bottom: solid  #e4e4e4 2px;
+	padding-bottom: 10px;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 10px;
+}
+
+.col {
+	width: 50%;
+	float: left;
+}
+
+.overview-info {
+	font-weight: bold;
+	float: left;
+}
+
+.current {
+	float: right;
+}
+
+.section-heading {
+	text-transform: uppercase;
+}
+
+.food {
+	clear: left;
+}
+
+.drink,
+.food {
+	text-align: center;
+}
+
+.button {
+	border: solid #e4e4e4 2px;
+	font-size: 16px;
+	background-color: white;
+	height: 200px;
+	width: 200px;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:200px 200px;
+}
+
+.item-name {
+	float: left;
+	text-align: left;
+		position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.item-price {
+	float: right;
+	text-align: right;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.bill {
+	list-style: none;
+	padding: 20px;
+	height: 380px;
+	background-color: #ecf0f1;
+	overflow: scroll;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.bill li {
+	margin-bottom: 10px;
+}
+
+.bill-result {
+	font-size: 1.25em;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 21px;
+}
+
+.total-container {
+	border: solid #e4e4e4 2px;
+	padding: 20px;
+}
+
+#AItem {
+	background-image: url("images/plain.png");
+}
+
+#BItem {
+	background-image: url("images/butter.png");
+}
+
+#CItem {
+	background-image: url("images/avocado.png");
+}
+
+#DItem {
+	background-image: url("images/peanutbutter.png");
+}
+
+#EItem {
+	background-image: url("images/jam.png");
+}
+
+#FItem {
+	background-image: url("images/water.png");
+}
+
+#GItem {
+	background-image: url("images/coffee.png");
+}
+
+#HItem {
+	background-image: url("images/tea.png");
+}
+
+.logo {
+	width: 150px;
+	height: 150px;
+}
