@@ -63,7 +63,7 @@ footer {
 .item-name {
 	float: left;
 	text-align: left;
-		position: absolute;
+	position: absolute;
 	bottom: 10px;
 	left: 10px;
 }
