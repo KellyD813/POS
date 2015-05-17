@@ -1,5 +1,3 @@
-console.log("linked");
-
 //LOCATING ELMS FROM HTML
 var bill = document.querySelector(".bill");
 var subtotal = document.querySelector(".subtotal");
@@ -20,7 +18,7 @@ var subtotalBill = 0;
 var taxBill = 0;
 var finalBill = 0;
 
-//CONSTRUCTOR FUNCTIONS(MENU ITEMS)
+//CONSTRUCTOR FUNCTION(MENU ITEMS)
 var MenuItems = function(name, price) {
 	this.name = name;
 	this.price = price;
@@ -46,7 +44,7 @@ MenuItems.prototype.addToBill = function() {
 
 MenuItems.prototype.updateBillTotals = function () {
 	subtotalBill += this.price;
-	taxBill = (subtotalBill * .05).toFixed(2);
+	taxBill = subtotalBill * .05;
 	finalBill = subtotalBill + taxBill;
 };
 
