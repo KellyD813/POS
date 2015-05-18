@@ -103,35 +103,35 @@ footer {
 }
 
 #AItem {
-	background-image: url("images/plain.png");
+	background-image: url("/images/plain.png");
 }
 
 #BItem {
-	background-image: url("images/butter.png");
+	background-image: url("/images/butter.png");
 }
 
 #CItem {
-	background-image: url("images/avocado.png");
+	background-image: url("/images/avocado.png");
 }
 
 #DItem {
-	background-image: url("images/peanutbutter.png");
+	background-image: url("/images/peanutbutter.png");
 }
 
 #EItem {
-	background-image: url("images/jam.png");
+	background-image: url("/images/jam.png");
 }
 
 #FItem {
-	background-image: url("images/water.png");
+	background-image: url("/images/water.png");
 }
 
 #GItem {
-	background-image: url("images/coffee.png");
+	background-image: url("/images/coffee.png");
 }
 
 #HItem {
-	background-image: url("images/tea.png");
+	background-image: url("/images/tea.png");
 }
 
 .logo {
