@@ -1,16 +1,16 @@
-#“Toasted” Point of Sale
+# “Toasted” Point of Sale
 
 “Toasted” Point of Sale is a POS system created for Toasted, a fictional, artisan, toast restaurant.
 
-##Features
+## Features
 
-The Toasted POS includes items, prices, and images as well as a receipt area that updates as items are added to the bill. 
+The Toasted POS includes items, prices, and images as well as a receipt area that updates as items are added to the bill.
 
-##Technology
+## Technology
 
 HTML, CSS, and Javascript were used to build this application.
 
-##Installation (mac)
+## Installation (mac)
 
 ```sh
 $ git clone https://github.com/KellyD813/POS.git
